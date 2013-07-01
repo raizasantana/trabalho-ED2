@@ -1,0 +1,4 @@
+trabalho-ED2
+============
+
+Olá pessoal,  Para a próxima aula, vocês devem fazer o seguinte exercício de implementação (em Java ou C):  1. Criar um programa que gere, aleatoriamente, 50.000 endereços e 100.000 pessoas, associando à cada pessoa 1 endereço. Uma dica para preencher os campos dos objetos com dados aleatórios é utilizar a classe java.util.UUID, que gera identificadores universais. Após gerar os objetos, o programa deve ser capaz de armazena-los em: (i) um único arquivo-texto; e (ii) dois arquivos-texto separados, havendo um arquivo por classe.  2. Criar um programa que leia os arquivos, recrie os objetos e os armazene em uma árvore binária, computando o tempo utilizado para fazer esta operação.  3. Comparar os tempos necessários para recriar as estruturas quando foi utilizado 1 arquivo para armazenar os dados com o cenário onde foram utilizados 2 arquivos.  Podem usar as estruturas de árvore já existentes do Java.
