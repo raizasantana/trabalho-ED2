@@ -6,6 +6,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.HashMap;
 import java.util.TreeMap;
 
 import model.Endereco;
@@ -142,7 +143,8 @@ public class TrataArquivo {
 	public static TreeMap<String, Object> leArquivo(String arquivoP, String arquivoE){
 		FileInputStream arqP = null, arqE = null;
 		ObjectInputStream inP = null, inE = null;;
-		TreeMap<String, Object> listaP = null, listaE = null;
+		TreeMap<String, Object> listaP = null;
+		HashMap<String, Object> listaE = null;
 		Object objP = null, objE = null;
 		try {
 			//Arquivo onde estao os dados serializados
@@ -151,7 +153,7 @@ public class TrataArquivo {
 	 
 			//Recupera os dados
 			listaP = new TreeMap<String, Object>();
-			listaE = new TreeMap<String, Object>();
+			listaE = new HashMap<String, Object>();
 			objP = new Object();
 			objE = new Object();
 			
