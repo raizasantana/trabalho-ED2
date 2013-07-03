@@ -10,8 +10,9 @@ import model.Pessoa;
 
 public class Principal {
 	public static void main(String[] args) {
+		//Ao descomentar esse codigo, o programa ira recriar todo o arquivo 'Pessoas.ser' com os objetos gravados
 		/*
-		int qtdP = 50, qtdE = 100;
+		int qtdP = 50000, qtdE = 100000;
 		
 		Pessoa vetP[] = Pessoa.geraPessoas(qtdP);
 		Endereco vetE[] = Endereco.geraEnderecos(qtdE);
@@ -22,6 +23,8 @@ public class Principal {
 		
 		TrataArquivo.gravaObjetos(vetP, "Arquivos/Pessoas.ser");
 		*/
+		
+		//Esse trecho de codigo so carrega as pessoas numa arvore e a imprime
 		TreeMap<String, Object> listaPessoas = TrataArquivo.leArquivo("Arquivos/Pessoas.ser");
 		System.out.println(listaPessoas);
 	}

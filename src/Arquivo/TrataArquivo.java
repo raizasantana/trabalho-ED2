@@ -43,12 +43,12 @@ public class TrataArquivo {
 			//Arquivo onde sera gravado, trocar para TRUE quando quiser colocar no final do arquivo e nao sobrescrever tudo
 			arq = new FileOutputStream(arquivo, false);
 			
-			//Objeto que vai escrever os dados
-			out = new ObjectOutputStream(arq);
-			
 			//Escreve os dados
-			for(int i = 0; i < pessoas.length; i++)
+			for(int i = 0; i < pessoas.length; i++){
+				//Instancia um novo gravador de fluxo de dados pra cada objeto
+				out = new ObjectOutputStream(arq);
 				out.writeObject(pessoas[i]);
+			}
 		} catch (IOException e){
 			e.printStackTrace();
 		} finally{
@@ -88,7 +88,7 @@ public class TrataArquivo {
 			}
 			long endTime = System.currentTimeMillis();
 			long totalTime = endTime - startTime;
-			System.out.println("Tempo total para o carregamento da arvore: " + totalTime);
+			System.out.println("Tempo total para o carregamento da arvore: " + totalTime + " ms");
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
