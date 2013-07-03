@@ -1,8 +1,9 @@
 package model;
 
+import java.io.Serializable;
 import java.util.UUID;
 
-public class Endereco {
+public class Endereco implements Serializable{
 
 	private String id;
 	private String estado;
@@ -69,5 +70,10 @@ public class Endereco {
 		this.numero = numero;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return "ID: " + this.id + " - Estado: "+ this.estado
+				+ " - Cidade: " + this.cidade + " - Rua: " + this.rua
+				+ " - Numero: " + this.numero;
+	}
 }

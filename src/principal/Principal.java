@@ -1,6 +1,7 @@
 package principal;
 
 import java.util.ArrayList;
+import java.util.TreeMap;
 
 import Arquivo.TrataArquivo;
 import model.Endereco;
@@ -9,15 +10,19 @@ import model.Pessoa;
 
 public class Principal {
 	public static void main(String[] args) {
-		int qtdP = 5, qtdE = 10, i = 0, j = 0;
+		/*
+		int qtdP = 50, qtdE = 100;
+		
 		Pessoa vetP[] = Pessoa.geraPessoas(qtdP);
 		Endereco vetE[] = Endereco.geraEnderecos(qtdE);
 		
-		//O gravar funciona e guarda um novo objeto no final;
-		//TrataArquivo.gravaObjeto(vetP[0], "Arquivos/Pessoas.ser");
-		//TrataArquivo.gravaObjeto(vetP[1], "Arquivos/Pessoas.ser");
+		for(int i = 0; i < qtdP; i++){
+			vetP[i].setEndereco(vetE[(int)(Math.random() * (qtdE - 1))]);
+		}
 		
-		ArrayList<Object> listaPessoas = TrataArquivo.leArquivo("Arquivos/Pessoas.ser");
+		TrataArquivo.gravaObjetos(vetP, "Arquivos/Pessoas.ser");
+		*/
+		TreeMap<String, Object> listaPessoas = TrataArquivo.leArquivo("Arquivos/Pessoas.ser");
 		System.out.println(listaPessoas);
 	}
 }

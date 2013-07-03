@@ -80,7 +80,7 @@ public class  Pessoa implements Serializable {
 	
 	@Override
 	public String toString() {
-		return "ID: " + this.id + " - Nome: " + this.nome + " - Idade: " + this.idade;
+		return "ID: " + this.id + " - Nome: " + this.nome + " - Idade: " + this.idade + " | " + this.endereco + "\n";
 	}
 
 }
