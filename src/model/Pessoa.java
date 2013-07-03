@@ -16,7 +16,7 @@ public class  Pessoa implements Serializable {
 		Pessoa p = new Pessoa();
 		p.setId(getIdAleatorio());
 		p.setIdade(20);
-		p.setNome("Usuario X");
+		p.setNome("Asdrubal " + p.getId().substring(0, 8));
 		
 		return p;		
 	}
@@ -80,7 +80,7 @@ public class  Pessoa implements Serializable {
 	
 	@Override
 	public String toString() {
-		return "ID: " + this.id + " - Nome: " + this.nome + " - Idade: " + this.idade + "\n";
+		return "ID: " + this.id + " - Nome: " + this.nome + " - Idade: " + this.idade;
 	}
 
 }
