@@ -9,7 +9,8 @@ public class  Pessoa implements Serializable {
 	private String id;
 	private String nome;
 	private int idade;
-
+	private String idEndereco;
+	
 	private Endereco endereco;
 	
 	public static Pessoa geraPessoaIdAleatorio(){
@@ -46,6 +47,15 @@ public class  Pessoa implements Serializable {
 		}
 		return pessoaEndereco;
 	}
+	
+	public String getIdEndereco() {
+		return idEndereco;
+	}
+
+	public void setIdEndereco(String idEndereco) {
+		this.idEndereco = idEndereco;
+	}
+
 	public Endereco getEndereco() {
 		return endereco;
 	}

@@ -74,6 +74,6 @@ public class Endereco implements Serializable{
 	public String toString() {
 		return "ID: " + this.id + " - Estado: "+ this.estado
 				+ " - Cidade: " + this.cidade + " - Rua: " + this.rua
-				+ " - Numero: " + this.numero;
+				+ " - Numero: " + this.numero + "\n";
 	}
 }
