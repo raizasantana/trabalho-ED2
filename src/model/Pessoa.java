@@ -1,9 +1,10 @@
 package model;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.UUID;
 
-public class  Pessoa {
+public class  Pessoa implements Serializable {
 	
 	private String id;
 	private String nome;
@@ -77,7 +78,10 @@ public class  Pessoa {
 		this.idade = idade;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return "ID: " + this.id + " - Nome: " + this.nome + " - Idade: " + this.idade + "\n";
+	}
 
 }
 
